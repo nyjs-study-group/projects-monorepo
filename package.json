@@ -1,0 +1,16 @@
+{
+  "name": "nyjs-projects-monorepo",
+  "version": "0.0.1",
+  "description": "A place to set up full stack projects for practice coding my members of the New York JavaScript Study Group",
+  "main": "index.js",
+  "repository": "https://github.com/bobbwhy/nyjs-projects-monorepo.git",
+  "author": "Robert LaMarca <robertlamarca@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
