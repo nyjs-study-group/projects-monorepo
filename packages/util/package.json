@@ -1,5 +1,5 @@
 {
-  "name": "@nyjs-projects-monoreo/util",
+  "name": "@nyjs-projects-monorepo/util",
   "version": "0.0.1",
   "private": true,
   "description": "Building blocks for fracktopia packages",
@@ -16,8 +16,5 @@
   ],
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "dependencies": {
-    "@fracktopia/makers": "^0.0.1"
   }
 }

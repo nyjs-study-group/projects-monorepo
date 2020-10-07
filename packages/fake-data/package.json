@@ -1,5 +1,5 @@
 {
-  "name": "@mmdspy/fake-data",
+  "name": "@nyjs-projects-monorepo/fake-data",
   "version": "0.0.1",
   "private": true,
   "description": "Fake Data for All testing",
@@ -21,10 +21,7 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "bugs": {
-    "url": "https://gitlab.com/rlamarca/mmdspy/issues"
-  },
   "dependencies": {
-    "@mmdspy/server": "^0.0.1"
+    "@nyjs-projects-monorepo/util": "^0.0.1"
   }
 }
