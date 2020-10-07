@@ -1,18 +1,12 @@
 
 import { v4 as uuid } from 'uuid';
+import {randomIntegerList} from './util.methods';
 
 const faker = require( 'faker' );
-const fs = require('fs');
-const path = require('path');
 
-const generateRandomIntegerList
-  = require('./util.methods').generateRandomIntegerList;
+// const randomIntegerList
+//   = require('./util.methods').randomIntegerList;
 
-const PROJECT_PATH = process.cwd();
-const DATA_PATH = path.resolve( PROJECT_PATH, 'packages', 'fake-data', 'data');
-
-const PERSON_COUNT = 500;
-const ADDRESSES_COUNT = 400;
 
 export const generatePersons = ( count ) => {
   const { name } = faker;
@@ -40,11 +34,19 @@ export const generatePersons = ( count ) => {
 export const generateFriendConnections = ( personCount ) => {
   const maxFriendConnections = Math.floor( personCount * .8 );
   const friendConnections = [];
+
+  const randomIntegerParams = {
+    minLength: 0,
+    maxLength: Math.ceil( personCount * .5 ),
+    minValue: 0,
+    maxValue: personCount,
+  }
+
   let i = 0;
   for ( ; i !== personCount; i++ ) {
     friendConnections[ i ]
-      = generateRandomIntegerList(
-        0, maxFriendConnections, 0, personCount, true
+      = randomIntegerList(
+          randomIntegerParams
         );
   }
   return friendConnections;
@@ -54,11 +56,19 @@ export const generateFriendConnections = ( personCount ) => {
 export const generatePersonAddressConnections = ( personCount, addressesCount ) => {
   const maxAddressConnections = addressesCount < 10 ? 5 : 10;
   const addressConnections = [];
+
+  const randomIntegerParams = {
+    minLength: 0,
+    maxLength: maxAddressConnections,
+    minValue: 0,
+    maxValue: addressesCount,
+  }
+
   let i = 0;
   for ( ; i !== personCount; i++ ) {
     addressConnections[ i ]
-      = generateRandomIntegerList(
-          0, maxAddressConnections, 0, addressesCount, true
+      = randomIntegerList(
+          randomIntegerParams
         );
   }
   return addressConnections;
