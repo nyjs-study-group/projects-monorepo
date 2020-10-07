@@ -1,16 +1,10 @@
 
-const faker = require( 'faker' );
-const fs = require('fs');
-const path = require('path');
-
-const generateRandomIntegerList
-  = require('./util.methods').generateRandomIntegerList;
-
-const PROJECT_PATH = process.cwd();
-const DATA_PATH = path.resolve( PROJECT_PATH, 'packages', 'fake-data', 'data');
-
-const PERSON_COUNT = 500;
-const ADDRESSES_COUNT = 400;
+import {
+  generateAddresses,
+  generatePersons,
+  generatePersonAddressConnections,
+  generateFriendConnections,
+} from '../src';
 
 
 export const generate = async () => {
@@ -40,3 +34,8 @@ export const generate = async () => {
     JSON.stringify( addressConnections, null, 2 )
   );
 }
+
+
+
+
+generate().then( () => console.log( 'fake data generated')).catch( e => console.log( e.message ));

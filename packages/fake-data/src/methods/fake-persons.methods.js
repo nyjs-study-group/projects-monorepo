@@ -1,4 +1,6 @@
 
+import { v4 as uuid } from 'uuid';
+
 const faker = require( 'faker' );
 const fs = require('fs');
 const path = require('path');
@@ -24,6 +26,8 @@ export const generatePersons = ( count ) => {
     persons[ i ] = {
       firstName: name.firstName( gender ),
       lastName: name.lastName( gender ),
+      username: uuid(),
+      password: uuid(),
       middleName: name.firstName( gender ),
       age: Math.floor( Math.random() * 100 ),
       occupation: name.jobTitle(),
@@ -32,24 +36,6 @@ export const generatePersons = ( count ) => {
   }
   return persons;
 }
-
-export const generateAddresses = ( count ) => {
-    const { address } = faker;
-    const addresses = [];
-    let i = 0;
-    for ( ; i !== count; i++ ) {
-      addresses[ i ] = {
-        address1: address.streetAddress( true ),
-        address2: address.secondaryAddress(),
-        city: address.city(),
-        state: address.state(),
-        country: address.country(),
-        zipCode: address.zipCode()
-      }
-    }
-    return addresses;
-}
-
 
 export const generateFriendConnections = ( personCount ) => {
   const maxFriendConnections = Math.floor( personCount * .8 );
@@ -78,31 +64,3 @@ export const generatePersonAddressConnections = ( personCount, addressesCount ) 
   return addressConnections;
 }
 
-
-export const generate = async () => {
-
-  const persons = generatePersons( PERSON_COUNT );
-  const addresses = generateAddresses( ADDRESSES_COUNT );
-  const friendConnections = generateFriendConnections( PERSON_COUNT );
-  const addressConnections = generatePersonAddressConnections( ADDRESSES_COUNT );
-
-  await fs.writeFileSync(
-    path.resolve( DATA_PATH, 'persons.json'),
-    JSON.stringify( persons, null, 2 )
-  );
-
-  await fs.writeFileSync(
-    path.resolve( DATA_PATH, 'addresses.json'),
-    JSON.stringify( addresses, null, 2 )
-  );
-
-  await fs.writeFileSync(
-    path.resolve( DATA_PATH, 'persons-to-persons.json'),
-    JSON.stringify( friendConnections, null, 2 )
-  );
-
-  await fs.writeFileSync(
-    path.resolve( DATA_PATH, 'persons-to-addresses.json'),
-    JSON.stringify( addressConnections, null, 2 )
-  );
-}

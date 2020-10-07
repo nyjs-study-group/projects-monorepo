@@ -7,6 +7,9 @@
   "homepage": "https://gitlab.com/rlamarca/mmdspy#readme",
   "license": "UNLICENSED",
   "main": "scripts/app.js",
+  "scripts": {
+    "fake:persons": "babel-node ./packages/fake-data/scripts/generate-fake-persons.js | ./node_modules/.bin/bunyan"
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
