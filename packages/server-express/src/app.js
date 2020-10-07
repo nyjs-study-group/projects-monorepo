@@ -6,11 +6,11 @@ const PROJECT_PATH = process.cwd();
 
 require('dotenv').config({ path: path.resolve( PROJECT_PATH, 'packages', 'server', '.env')})
 
+console.log( path.resolve( PROJECT_PATH, 'packages', 'server', '.env') )
 
 import path from 'path';
 import express from 'express';
 import cors from 'cors';
-
 
 const addresses = require('../../fake-data/data/addresses.json');
 const persons = require('../../fake-data/data/persons.json');
@@ -18,9 +18,8 @@ const personsToAddresses = require('../../fake-data/data/persons-to-addresses.js
 const personsToPersons = require('../../fake-data/data/persons-to-persons.json');
 
 
-
-const { HOST, PORT } = process.env;
-
+// const { HOST, PORT } = process.env;
+const PORT = 9999
 
 
 const app = express();
