@@ -1,0 +1,29 @@
+{
+  "name": "@nyjs-projects-monorepo/server-express",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Basic node express server to run the ui",
+  "author": "Robert LaMarca <robertlamarca@gmail.com>",
+  "homepage": "https://gitlab.com/rlamarca/mmdspy#readme",
+  "license": "UNLICENSED",
+  "main": "src/app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/rlamarca/mmdspy.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/rlamarca/mmdspy/issues"
+  },
+  "dependencies": {
+  }
+}

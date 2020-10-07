@@ -8,7 +8,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "fake:persons": "babel-node ./packages/fake-data/scripts/generate-persons.js | ./node_modules/.bin/bunyan"
+    "fake:persons": "babel-node ./packages/fake-data/scripts/generate-persons.js | ./node_modules/.bin/bunyan",
+    "server:start": "nodemon"
   },
   "dependencies": {
     "cors": "^2.8.5",
