@@ -1,0 +1,23 @@
+{
+  "name": "@nyjs-projects-monoreo/util",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Building blocks for fracktopia packages",
+  "author": "Robert LaMarca <robertlamarca@gmail.com>",
+  "homepage": "",
+  "license": "UNLICENSED",
+  "main": "src/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@fracktopia/makers": "^0.0.1"
+  }
+}
