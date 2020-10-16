@@ -51,8 +51,9 @@ shares your name or initials in bash with the following commands.
 ## About MonoRepos
 A monorepo is simply a repository that contains multiple packages that 
 would otherwise be in their own repository ( which would be a multirepo ).
+ 
 
-The reason 
+
 
 
 
