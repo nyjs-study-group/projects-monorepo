@@ -56,33 +56,21 @@ would otherwise be in their own repository ( which would be a multirepo ).
 
 ## NPM Commands for this Repo
 
-### Fake-Data Module
+### Fake-Data Package
 * **fake:persons `yarn fake:persons`:** generates fake person data and saves it to 
 packages/fake-data/data/persons.json
 
-* 
+### Node Express Package
+* **server:start `yarn server:start`:** starts the node express server.  
+You can stop the server by ctrl-C
 
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> Stashed changes
-=======
-The reason 
-=======
->>>>>>> rml/docker-setup
-
-
-
-
->>>>>>> rml/development
- 
+### Mongo Database
+* **mongo:start `yarn mongo:start`:** 
+    * Starts the Mongo Database from Docker with .env/mongodb.env file.  If you do not 
+    have that file, create it from the sample.env file
+    * Starts Adminer Database GUI from Docker
+    
+* **mongo:stop `yarn mongo:stop`:**
+    * Stops the Mongo Database from Docker
  
 
