@@ -4,15 +4,23 @@
 
 This [monorepo](https://github.com/bobbwhy/nyjs-projects-monorepo) contains a series of practice projects for the 
 *[New York JavaScript Study Meetup Group](https://www.meetup.com/New-York-JavaScript-Study-Group/)*
-
-By placing all our projects into the monorepo, we can more easily share common 
-code among them as separate packages.  Also, members who work on one platform, such as 
-react can also practice porting the execution to another one, such as Vue.
  
 During our meetings we will work with different areas of this monorepo either to continue its construction or 
 to illustrate specific techniques.
 
-### some ways to participate:
+#### Current Status of Monorepo: Pre-Alpha 
+Currently we are working to prepare this for the first workshop on 10/24.  While it should be possible
+to start using some of the code here before then, it is not recommended.
+
+By the first workshop, this repo will be ready to act as a starter kit.
+
+#### Some things you need to make use of this Monorepo:
+* git
+* nodejs v 12.x
+* docker
+
+
+#### some ways to participate:
 
 1: **Contribute directly to the Package Releases:** If you want to contribute, 
 please attend one of our meetings and let us know.
@@ -52,7 +60,6 @@ shares your name or initials in bash with the following commands.
 A monorepo is simply a repository that contains multiple packages that 
 would otherwise be in their own repository ( which would be a multirepo ).
  
-
 
 ## NPM Commands for this Repo
 
