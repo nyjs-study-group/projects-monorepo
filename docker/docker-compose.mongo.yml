@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+
+## The actual Mongo DB
+  db:
+    env_file: ../.env/mongodb.env
+    image: mongo
+    container_name: nyjs_mongodb
+
+## Adminer Graphical Database System
+  adminer:
+    container_name: nyjs_adminer
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+
