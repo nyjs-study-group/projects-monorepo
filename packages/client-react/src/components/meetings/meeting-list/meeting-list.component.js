@@ -11,11 +11,12 @@ import './meeting-list.component.css';
 
 export const MeetingList = props => {
 
-  const MeetingItems = fakeMeetings.map( ( meeting, i ) => (
-      <Meeting key={`key_${i}`} meeting={meeting} />
+  const MeetingItems =
+    fakeMeetings.map(
+      ( meeting, i ) => (
+        <Meeting key={`key_${i}`} meeting ={meeting} />
     )
   );
-
 
   return (
     <>
