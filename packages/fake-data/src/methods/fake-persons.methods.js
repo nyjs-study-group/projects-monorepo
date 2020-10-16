@@ -4,10 +4,6 @@ import {randomIntegerList} from './util.methods';
 
 const faker = require( 'faker' );
 
-// const randomIntegerList
-//   = require('./util.methods').randomIntegerList;
-
-
 export const generatePersons = ( count ) => {
   const { name } = faker;
 
@@ -32,12 +28,16 @@ export const generatePersons = ( count ) => {
 }
 
 export const generateFriendConnections = ( personCount ) => {
-  const maxFriendConnections = Math.floor( personCount * .8 );
+  const maxFriendConnections =
+    personCount < 10
+      ? personCount
+      : Math.floor( personCount * ( personCount**-.1 ) );
+
   const friendConnections = [];
 
   const randomIntegerParams = {
     minLength: 0,
-    maxLength: Math.ceil( personCount * .5 ),
+    maxLength: maxFriendConnections,
     minValue: 0,
     maxValue: personCount,
   }
