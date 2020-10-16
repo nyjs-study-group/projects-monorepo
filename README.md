@@ -48,6 +48,30 @@ shares your name or initials in bash with the following commands.
 ```
 
 
+## About MonoRepos
+A monorepo is simply a repository that contains multiple packages that 
+would otherwise be in their own repository ( which would be a multirepo ).
+
+## NPM Commands for this Repo
+
+### Fake-Data Module
+* **fake:persons `yarn fake:persons`:** generates fake person data and saves it to 
+packages/fake-data/data/persons.json
+
+* 
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> Stashed changes
  
  
 
