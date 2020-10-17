@@ -10,8 +10,9 @@
   "scripts": {
     "fake:persons": "babel-node ./packages/fake-data/scripts/generate-persons.js | ./node_modules/.bin/bunyan",
     "server:start": "babel-node ./packages/server-express/src/app.js | ./node_modules/.bin/bunyan",
-    "mongo:start": "./scripts/mongo-docker-start.bash",
-    "mongo:stop": "docker-compose -f docker/docker-compose.mongo.yml down"
+    "_mongo:start": "./scripts/mongo-docker-start.bash",
+    "mongo:start": "node ./scripts/mongo-docker.start.js",
+    "mongo:stop": "docker-compose -f docker/docker-compose.mongo.yml stop"
   },
   "dependencies": {
     "cors": "^2.8.5",
