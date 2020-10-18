@@ -1,4 +1,3 @@
-#!/usr/local/bin/bash
 echo "Starting the Docker Container for MongoDB"
 {
   docker-compose -f docker/docker-compose.mongo.yml up --force-recreate -d \

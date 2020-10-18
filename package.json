@@ -10,7 +10,7 @@
   "scripts": {
     "fake:persons": "babel-node ./packages/fake-data/scripts/generate-persons.js | ./node_modules/.bin/bunyan",
     "server:start": "babel-node ./packages/server-express/src/app.js | ./node_modules/.bin/bunyan",
-    "mongo:start": "./scripts/mongo-docker-start.bash",
+    "mongo:start": "node ./scripts/script-launcher.js --script-file=mongo-docker.start --env-file=mongodb.env",
     "mongo:stop": "docker-compose -f docker/docker-compose.mongo.yml stop"
   },
   "dependencies": {
