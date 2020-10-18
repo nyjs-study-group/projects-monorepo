@@ -13,12 +13,12 @@ const scriptFile = flags['script-file'];
 const envFile = flags['env-file'];
 
 
-if ( !envFile ) { 
+if ( !envFile ) {
     throw new Error(
         'Script Launcher Error!  No env file specified.');
 }
 
-if ( !scriptFile ) { 
+if ( !scriptFile ) {
     throw new Error(
         'Script Launcher Error!  No script file specified.');
 }
@@ -35,12 +35,12 @@ const SCRIPT_PATH = path.resolve( PROJECT_PATH, 'scripts' );
 const SCRIPT_FILE_PATH = path.resolve( SCRIPT_PATH, scriptFile ) + SCRIPT_EXTENSION;
 
 console.log('Checking for .env File at: ', ENV_FILE_PATH );
-if ( !fs.existsSync( ENV_FILE_PATH ) ) { 
+if ( !fs.existsSync( ENV_FILE_PATH ) ) {
     throw new Error('Script Launcher Error! Env File not found at: ' + ENV_FILE_PATH );
 }
 
 console.log('Checking for Script File at: ', SCRIPT_FILE_PATH );
-if ( !fs.existsSync( SCRIPT_FILE_PATH ) ) { 
+if ( !fs.existsSync( SCRIPT_FILE_PATH ) ) {
     throw new Error('Script Launcher Error! Script File not found at: ' + SCRIPT_FILE_PATH );
 }
 
@@ -48,14 +48,13 @@ const child = !!isWindows
     ? spawn('powershell.exe', [SCRIPT_FILE_PATH] )
     : spawn( SCRIPT_FILE_PATH );
 
-child.stdout.on('data', data => { 
+child.stdout.on('data', data => {
     console.log( 'Data! ', data.toString() );
 });
-child.on('data', data => { 
-    console.log( 'Error! ', data.toString() );
+child.on('error', error => {
+    console.log( 'Error! ', error.toString() );
 });
-child.on('exit', () => { 
-    console.log( 'Powershell Script Finished!')
+child.on('exit', () => {
+    console.log( 'Script Finished!')
 });
 
-      
