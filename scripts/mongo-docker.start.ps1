@@ -20,7 +20,7 @@ Try {
     Write-Output $result
 }
 Catch {
-    Write-Output "Something went wrong when trying to start MongoDB.
+    Write-Output "Something went wrong when trying to start MongoDB or Adminer.
     Please check https://www.docker.com for troubleshooting information.
     You way need to fix docker-compose.mongo.yml."
 }
