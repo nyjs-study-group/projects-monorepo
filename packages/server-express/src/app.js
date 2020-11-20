@@ -21,13 +21,14 @@ const personsToPersons = require('../../fake-data/data/persons-to-persons.json')
 // const { HOST, PORT } = process.env;
 const PORT = 9999
 
-
 const app = express();
 app.use( cors() );
 
 app.get('/', (req, res) => res.send( 'Hello' ));
-app.get('/api/fake/addresses', ( req, res ) => res.json( addresses ));
-app.get('/api/fake/persons', ( req, res ) => res.json( persons ));
+app.get('/api/fake/addresses',
+  ( req, res ) => res.json( addresses ));
+app.get('/api/fake/persons',
+  ( req, res ) => res.json( persons ));
 app.get('/api/fake/persons-to-addresses', ( req, res ) => res.json( personsToAddresses ));
 app.get('/api/fake/persons-to-persons', ( req, res ) => res.json( personsToPersons ));
 

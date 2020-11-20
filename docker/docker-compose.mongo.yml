@@ -7,13 +7,16 @@ services:
     env_file: ../.env/mongodb.env
     image: mongo
     container_name: nyjs_mongodb
+    ports:
+      - 27017:27017
+
 
 ## Adminer Graphical Database System
-  adminer:
-    container_name: nyjs_adminer
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
+#  adminer:
+#    container_name: nyjs_adminer_x
+#    image: adminer
+#    restart: always
+#    ports:
+#      - 8080:8080
 
 

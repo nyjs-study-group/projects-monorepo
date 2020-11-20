@@ -2916,6 +2916,11 @@
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.0.tgz#69a23a3ad29caf0097f06eda59b361ee2f0639f6"
   integrity sha1-aaI6OtKcrwCX8G7aWbNh7i8GOfY=
 
+"@types/mocha@^5.2.2":
+  version "5.2.7"
+  resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-5.2.7.tgz#315d570ccb56c53452ff8638738df60726d5b6ea"
+  integrity sha512-NYrtPht0wGzhwe9+/idPaBB+TqkY9AhTvOLMkThm0IoEfLaiVQZwBwyJ5puCkO3AUCWrmcoePjp2mbFocKy4SQ==
+
 "@types/node@*", "@types/node@>= 8":
   version "14.11.5"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.11.5.tgz#fecad41c041cae7f2404ad4b2d0742fdb628b305"
@@ -6768,6 +6773,13 @@ forever-agent@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
   integrity sha1-+8cfDEGt6zf5bFd60e1C2P2sypE=
+
+forget-me-maeby@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/forget-me-maeby/-/forget-me-maeby-0.0.2.tgz#f9fdba00abcb12983856c24552d44c5fe2ba076a"
+  integrity sha1-+f26AKvLEpg4VsJFUtRMX+K6B2o=
+  dependencies:
+    "@types/mocha" "^5.2.2"
 
 form-data@~2.3.2:
   version "2.3.3"

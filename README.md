@@ -72,12 +72,12 @@ packages/fake-data/data/persons.json
 You can stop the server by ctrl-C
 
 ### Mongo Database
-* **mongo:start `yarn mongo:start`:** 
+* **mongo:start `yarn mongo:start` or `npm run mongo:start`:** 
     * Starts the Mongo Database from Docker with .env/mongodb.env file.  If you do not 
     have that file, create it from the sample.env file
     * Starts Adminer Database GUI from Docker
     
-* **mongo:stop `yarn mongo:stop`:**
+* **mongo:stop `yarn mongo:stop`: or `npm run mongo:stop`**
     * Stops the Mongo Database from Docker
  
 
