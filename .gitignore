@@ -18,5 +18,9 @@ scratch.*
 .parcel-cache
 
 report.*.json
-
+`
 .env
+
+docker/data/mongo/*
+*.turtle
+docker/data
